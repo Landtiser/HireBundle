@@ -1,0 +1,59 @@
+input[type="text"] { border: 1px solid #666; width: 80%; color: #666; font-size: 1.2em; padding: 5px; margin-bottom: 10px; }
+.error { color:red; }
+
+html, body { margin: 0; padding: 0; background-color: #ffffff; }
+body, textarea { font-family: Verdana,Geneva,sans-serif; color: #444; }
+textarea { width: 80%; height: 150px; color: #666; padding: 5px; font-size: 1.2em; }
+h1, h2, h3 { font-family: Georgia,Times,Times New Roman,serif; color: #666; }
+h1 { margin-top: 0; padding-top: 20px; text-align: center; color: #05718b; width: 100%; }
+h2 { text-align: center; margin-top: 40px; color: #05718b; }
+h3 { text-align: center; color: #42badc; }
+ul { padding: 0 15px; }
+.logo { position: relative; height: 60px; width: auto; padding-bottom: 20px; display: block; margin: 0 auto; }
+.content { display: block; position: relative; margin: 0 auto; padding: 0 30px; width: 100%; max-width: 800px; box-sizing: border-box; color: #555; }
+.intro, #myform { display: block; position: relative; width: 100%; margin-bottom: 0; }
+.intro .content { background-color: #ffffff; padding-top: 10px; padding-bottom: 20px; }
+.intro .color-one { padding-bottom: 20px; }
+.intro .content.title { padding-bottom: 0; padding-left: 10px; padding-right: 10px; }
+#myform:after, #myform div:after, .intro:after {content: ""; display: table; clear: both;}
+#myform div {  position: relative; width: 100%; margin: 0 auto; text-align: center; }
+#myform .content { padding: 10px 0; }
+#myform .content.collapsed { padding: 0; }
+#myform div.first { padding-top: 0; }
+#myform div.last { border-bottom: none; margin-bottom: 10px; }
+#myform .input { position: relative; width: 80%; padding: 5px; margin-bottom: 10px; }
+#myform .input input[type="text"] { width: 100%; padding: 0; margin-bottom: 0; }
+label { display: block; width: 100%; font-size: 1.4em; color: #555555; font-family: Arial Black,Arial Bold,Gadget,sans-serif; }
+#myform .buttons { padding-top: 30px; }
+#myform .buttons .last { margin-bottom: 0; }
+button[type="button"] { border: 2px solid #05718b; padding: 5px; background-color: #fff; color: #05718b; width: 25%; margin: 20px 12%; float: left; }
+button[type="button"]:hover { background-color: #05718b; color: #ffffff; cursor: pointer; }
+button.yesActive { background-color: #05718b; color: #ffffff; }
+button.noActive { background-color: #fff; color: #aaa; border: 2px solid #aaa; }
+.add, .remove { height: 25px; width: 25px; position: absolute; cursor: pointer; }
+.add { bottom: 5px; right: -30px; }
+.remove { bottom: 5px; left: -30px; }
+
+.color-none { background-color: #dddddd; padding-top: 20px; }
+#myform .content { background-color: #ffffff; margin: 0 auto 20px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; }
+.color-one { background-color: #809b95; padding-top: 20px; }
+.color-two { background-color: #66818c; padding-top: 20px; }
+.color-three { background-color: #ef90a0; padding-top: 20px; }
+.color-four { background-color: #ffca8f; padding-top: 20px; }
+
+body.js #exp2, body.js #exp3, body.js #exp3Check, body.js #ref2, body.js #ref3, body.js #ref3Check, body.js .two, body.js .three, .add, .remove, .another, .js-content, #personalContainer, .dutyContainer, .dutyContainer2, .dutyContainer3, #closerContainer { display: none; }
+body.js .add, body.js .another, body.js .remove { display: block; }
+
+body.js .js-content { display: inline-block; }
+
+#myform div.another { border: 1px solid #42badc; margin-bottom: 0; box-sizing: border-box; }
+
+.submit-button { width: 100%; height: auto; margin: 0 0 20px; padding: 5px; color: #ffffff; background: #05718b; border: 1px solid #05718b; font-weight: bold; font-size: 1.2em; cursor: pointer; }
+
+@media screen and (min-width: 600px) {
+    
+    h1 { display: inline-block; text-align: left; padding-right: 20px; width: auto; }
+    
+    .logo { float: right; padding-top: 10px; padding-bottom: 0; }
+    
+}

@@ -1,0 +1,9 @@
+{
+    
+	"require": {
+
+		"mpdf/mpdf": "^6.1",
+		"phpoffice/phpword": "^0.13.0" 
+	}
+
+}

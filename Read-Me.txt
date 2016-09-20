@@ -1,0 +1,27 @@
+Thanks for using HireBundle!
+
+Below you'll find introductory instructions on how to make use of the email and website HTML files you just downloaded! They can be a powerful tool for setting yourself apart, and we want to make sure you can get the most out of them!
+
+(HireBundle is not associated with any of the services mentioned below, and they are used only as examples of convenient methods to achieve their respective goals.)
+
+
+To Send HTML Email Through Gmail
+--------------------------------
+
+1. Open the file 'email.html' in your browser of choice by double-clicking it.
+2. Select the entire page with Ctrl+A (Cmd+A for Mac), and copy the whole thing to your clipboard with Ctrl/Cmd+A.
+3. Open a new email in Gmail and paste (Ctrl/Cmd+V) the email into the body of the message.
+4. Hit send and let your new branded email work its magic!
+
+
+To Host Your Resume Website
+---------------------------
+
+1. Open https://www.bitballoon.com in your browser, and have your HireBundle files ready in a folder.
+2. Drag and drop the 'img' folder and the 'index.html' file 
+3. Edit the name of the website to reflect your own name or brand, like 'lastname.bitballoon.com'.
+4. Your website is now live! Send out some links!
+5. Add some tracking scripts, sign up for an account to manage your site, any additional 'extra' steps you desire!
+
+
+These instructions should get you started, but they're not at all exhaustive! Using different email providers or website hosts are entirely possible. With a little bit of research, the tools you now have in your hands have endless possibility!
