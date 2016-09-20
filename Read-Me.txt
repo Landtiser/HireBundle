@@ -17,6 +17,7 @@ To Send HTML Email Through Gmail
 To Host Your Resume Website
 ---------------------------
 
+1. Rename 'portfolio.html' to 'index.html'.
 1. Open https://www.bitballoon.com in your browser, and have your HireBundle files ready in a folder.
 2. Drag and drop the 'img' folder and the 'index.html' file 
 3. Edit the name of the website to reflect your own name or brand, like 'lastname.bitballoon.com'.

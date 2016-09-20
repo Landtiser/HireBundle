@@ -1083,7 +1083,7 @@ if($_POST['publish'] == 'Download Bundle')
     ------------- */
 
     // saving captured output to file
-    file_put_contents('index.html', $htmlWEB);
+    file_put_contents('portfolio.html', $htmlWEB);
 
     /* -------------
     Email Output
@@ -1250,7 +1250,7 @@ if($_POST['publish'] == 'Download Bundle')
     header('Content-Type: application/octet-stream');
     header('Content-disposition: attachment; filename="resume.zip"');
 
-    $fp = popen('zip -r - resume.pdf index.html email.html resume.docx read-me.txt img/email.png img/logo.png img/media.png img/phone.png img/web.png', 'r');
+    $fp = popen('zip -r - resume.pdf portfolio.html email.html resume.docx read-me.txt img/email.png img/logo.png img/media.png img/phone.png img/web.png', 'r');
 
     $bufsize = 8192;
     $buff = '';
