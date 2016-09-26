@@ -1242,23 +1242,46 @@ if($_POST['publish'] == 'Download Bundle')
 
     // Save as Word File
     $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-    $objWriter->save('resume.docx');
+    $objWriter->save('/test/resume.docx');
 
 
     // Save ZIP
 
-    header('Content-Type: application/octet-stream');
-    header('Content-disposition: attachment; filename="resume.zip"');
+    $zipfilename = "resume.zip";
 
-    $fp = popen('zip -r - resume.pdf portfolio.html email.html resume.docx read-me.txt img/email.png img/logo.png img/media.png img/phone.png img/web.png', 'r');
+     if( isset( $files ) ) unset( $files );
 
-    $bufsize = 8192;
-    $buff = '';
-    while( !feof($fp) ) {
-       $buff = fread($fp, $bufsize);
-       echo $buff;
-    }
-    pclose($fp);
+     $target = "/test";
+
+     $d = dir( $target );
+
+     while( false !== ( $entry = $d->read() ) )
+     {
+       if( substr( $entry, 0, 1 ) != "." && !is_dir( $entry ) ) 
+       {
+         $files[] = $entry;
+       }
+     }
+
+     header( "Content-Type: application/x-zip" );
+     header( "Content-Disposition: attachment; filename=\"$zipfilename\"" );
+
+     $filespec = "";
+
+     foreach( $files as $entry )
+     {
+       $filespec .= "\"$entry\" ";
+     }
+
+     chdir( $target );
+
+     $stream = popen( "/usr/bin/zip -q - $filespec", "r" );
+
+     if( $stream )
+     {
+       fpassthru( $stream );
+       fclose( $stream );
+     }
     
 }
 
