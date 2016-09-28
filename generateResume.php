@@ -1261,7 +1261,11 @@ $fileList = array(
     'portfolio.html',
     'email.html',
     'resume.docx',
-    'Read-Me.txt'
+    'Read-Me.txt',
+    'img/email.png',
+    'img/media.png',
+    'img/phone.png',
+    'img/web.png'
 );
  
 // add files
