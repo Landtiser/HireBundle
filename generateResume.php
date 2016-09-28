@@ -1242,46 +1242,45 @@ if($_POST['publish'] == 'Download Bundle')
 
     // Save as Word File
     $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-    $objWriter->save('/test/resume.docx');
+    $objWriter->save('resume.docx');
 
 
     // Save ZIP
 
-    $zipfilename = "resume.zip";
+// create object
+$zip = new ZipArchive();
+ 
+// open archive 
+if ($zip->open('resume.zip', ZIPARCHIVE::CREATE) !== TRUE) {
+    die ("Could not open archive");
+}
+ 
+// list of files to add
+$fileList = array(
+    'resume.pdf',
+    'portfolio.html',
+    'email.html',
+    'resume.docx',
+    'Read-Me.txt'
+);
+ 
+// add files
+foreach ($fileList as $f) {
+    $zip->addFile($f) or die ("ERROR: Could not add file: $f");   
+}
+    
+// close and save archive
+$zip->close();
+    
+$resumezip = "resume.zip";
 
-     if( isset( $files ) ) unset( $files );
+// Stream the file to the client 
+header("Content-Type: application/zip"); 
+header("Content-Length: " . filesize($resumezip)); 
+header("Content-Disposition: attachment; filename=\"resume.zip\""); 
+readfile($resumezip); 
 
-     $target = "/test";
-
-     $d = dir( $target );
-
-     while( false !== ( $entry = $d->read() ) )
-     {
-       if( substr( $entry, 0, 1 ) != "." && !is_dir( $entry ) ) 
-       {
-         $files[] = $entry;
-       }
-     }
-
-     header( "Content-Type: application/x-zip" );
-     header( "Content-Disposition: attachment; filename=\"$zipfilename\"" );
-
-     $filespec = "";
-
-     foreach( $files as $entry )
-     {
-       $filespec .= "\"$entry\" ";
-     }
-
-     chdir( $target );
-
-     $stream = popen( "/usr/bin/zip -q - $filespec", "r" );
-
-     if( $stream )
-     {
-       fpassthru( $stream );
-       fclose( $stream );
-     }
+unlink($resumezip); 
     
 }
 
